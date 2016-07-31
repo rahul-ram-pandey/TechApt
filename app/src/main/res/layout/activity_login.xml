@@ -54,4 +54,14 @@
         android:layout_marginTop="40dp"
         android:layout_below="@+id/btLogin"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Admin Login"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/tvRegister"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="69dp" />
 </RelativeLayout>
