@@ -11,6 +11,9 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class DatabaseHelper extends SQLiteOpenHelper {
 
+
+    //Nice Work With Database samjjha mujha badh me 
+    
     private static final int DATABASE_VERSION =1;
     private static final String DATABASE_NAME = "aptitude.db";
     private static final String TABLE_NAME = "userdetails";
