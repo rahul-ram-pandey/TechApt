@@ -2,6 +2,7 @@ package sies.Aptitude;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -32,7 +33,7 @@ public class Login extends AppCompatActivity {
         });
     }
 
-    public void onLoginClick(View v){
+    public void onLoginClick(final View v){
         if(v.getId() == R.id.btLogin){
             EditText u = (EditText)findViewById(R.id.etUname);
             String user = u.getText().toString();
@@ -43,12 +44,24 @@ public class Login extends AppCompatActivity {
             if(pass.equals(password)){
                 Toast msg = Toast.makeText(Login.this , "Successfull" , Toast.LENGTH_SHORT);
                 msg.show();
-                Intent regIntent = new Intent(Login.this, Topics.class);
+                Intent regIntent = new Intent(Login.this, Home.class);
                 Login.this.startActivity(regIntent);
             }
             else{
-                Toast msg = Toast.makeText(Login.this , "Username and Password does not match" , Toast.LENGTH_SHORT);
-                msg.show();
+
+                Snackbar snackbar = Snackbar
+                        .make(v, "Credentials do not match", Snackbar.LENGTH_LONG)
+                        .setAction("OK", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                //Snackbar snackbar1 = Snackbar.make(v, "Message is restored!", Snackbar.LENGTH_SHORT);
+                                //snackbar1.show();
+                            }
+                        });
+
+                snackbar.show();
+                //Toast msg = Toast.makeText(Login.this , "Username and Password does not match" , Toast.LENGTH_SHORT);
+                //msg.show();
             }
         }
     }
