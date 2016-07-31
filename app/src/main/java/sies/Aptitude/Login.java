@@ -32,6 +32,8 @@ public class Login extends AppCompatActivity {
         });
     }
 
+
+	//Login
     public void onLoginClick(View v){
         if(v.getId() == R.id.btLogin){
             EditText u = (EditText)findViewById(R.id.etUname);
