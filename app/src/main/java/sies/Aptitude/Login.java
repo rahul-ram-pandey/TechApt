@@ -44,7 +44,7 @@ public class Login extends AppCompatActivity {
             if(pass.equals(password)){
                 Toast msg = Toast.makeText(Login.this , "Successfull" , Toast.LENGTH_SHORT);
                 msg.show();
-                Intent regIntent = new Intent(Login.this, Topics.class);
+                Intent regIntent = new Intent(Login.this, Home.class);
                 Login.this.startActivity(regIntent);
             }
             else{
