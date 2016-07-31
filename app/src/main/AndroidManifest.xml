@@ -16,7 +16,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".Register" />
-        <activity android:name=".Topics"></activity>
+        <activity android:name=".Topics" />
+        <activity
+            android:name=".Home"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
