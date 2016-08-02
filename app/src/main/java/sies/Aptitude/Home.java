@@ -19,10 +19,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-
+        DatabaseHelper helper = new DatabaseHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,8 +126,9 @@ public class Home extends AppCompatActivity
         return true;
     }
 
-    public void display_subjects(View view){
+    public List<String> display_subjects(){
 
-
+    List<String> menu = helper.getAllUsername();
+        return menu;
     }
 }
