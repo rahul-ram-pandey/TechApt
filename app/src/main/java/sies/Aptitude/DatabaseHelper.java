@@ -14,6 +14,8 @@ import java.util.List;
  */
 public class DatabaseHelper extends SQLiteOpenHelper {
 
+    //kya bath hai panday sai kiya samjha mujha badhme lol
+
     private static final int DATABASE_VERSION =1;
     private static final String DATABASE_NAME = "aptitude.db";
     private static final String TABLE_NAME = "userdetails";
